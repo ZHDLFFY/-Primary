@@ -1,0 +1,27 @@
+<style>
+  input:hover,
+  li:hover {
+    border-color: rgb(236, 11, 218);
+    color: rgb(255, 31, 15)
+  }
+</style>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="container">
+      <h2></h2>
+      <ul class="list-group">
+        <li class="list-group-item" style="margin-top: 12px;" [ngClass]="{active:menuIndex==1}" (click)="menuClick(1)">
+          学生管理</li>
+        <li class="list-group-item  active" [ngClass]="{active:menuIndex==2}" (click)="menuClick(2)">学科查询</li>
+        <li class="list-group-item" [ngClass]="{active:menuIndex==3}" (click)="menuClick(3)">
+          退出登录</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-8">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

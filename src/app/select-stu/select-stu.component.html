@@ -1,0 +1,26 @@
+<style>
+  tr:hover {
+    background-color: aqua
+  }
+</style>
+<div class="col-sm-10">
+  <table class="table table-striped" style="border-radius:10px;margin-top:20px;">
+    <thead class="thead-dark">
+      <tr>
+        <th>班级</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>课程</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students">
+        <td>{{s.classes}} </td>
+        <td>{{s.name}}</td>
+        <td>{{s.gender==1?'男':'女'}}</td>
+        <td>{{s.subject}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
